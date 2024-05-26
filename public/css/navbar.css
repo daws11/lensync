@@ -1,0 +1,92 @@
+/* Basics */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+    color: #333; /* Dark text for light background */
+}
+
+body {
+    background-color: #ffffff; /* Light background */
+    overflow: auto; /* Allow scrolling */
+}
+
+.sidebar-navigation {
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color: #e3f2fd; /* Light blue background */
+    position: fixed; /* Makes the sidebar fixed during scrolling */
+    top: 0; /* Aligns the top of the sidebar with the top of the viewport */
+    left: 0; /* Aligns the sidebar to the left of the viewport */
+    padding-top: 100px;
+    z-index: 1000; /* Ensures the sidebar is above other content */
+}
+
+
+.sidebar-navigation ul {
+    text-align: center;
+    color: #333; /* Dark text for better readability */
+}
+
+.sidebar-navigation ul li {
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+    border-bottom: 1px solid #cccccc; /* subtle separation */
+}
+
+.sidebar-navigation ul li i {
+    display: block;
+    font-size: 15px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #ffffff; /* Light background for tooltip */
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: .5px;
+    border: 1px solid #bbbbbb; /* subtle border */
+}
+
+.sidebar-navigation ul li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+}
+
+.sidebar-navigation ul li:hover {
+    background-color: #bbdefb; /* Lighter blue on hover */
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+    background-color: #90caf9; /* Active state with slightly darker blue */
+}
+
+.sidebar-navigation ul li.active i {
+    color: #1976d2; /* Blue accent for icons */
+}
+
+
+
